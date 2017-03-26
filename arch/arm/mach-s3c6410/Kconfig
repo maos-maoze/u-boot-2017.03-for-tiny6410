@@ -1,0 +1,8 @@
+if ARCH_S3C6410
+
+config SYS_SOC
+	default "s3c6410"
+
+source "board/samsung/tiny6410/Kconfig"
+
+endif
