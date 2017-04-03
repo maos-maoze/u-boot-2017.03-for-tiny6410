@@ -2,6 +2,34 @@ if ARCH_S3C6410
 
 config SYS_BOARD
 	default "tiny6410"
+	select CLK_533_133_66
+	select NAND_S3C6410
+	select SYS_IRAM_BASE
+	select SYS_IRAM_SIZE
+	select SYS_IRAM_END
+	select SYS_S3C_NAND_HWECC
+	select S3C6410
+
+config CLK_533_133_66
+	bool
+
+config NAND_S3C6410
+	bool
+
+config SYS_IRAM_BASE
+	default "0x0c000000"
+
+config SYS_IRAM_SIZE
+	default "0x2000"
+
+config SYS_IRAM_END
+	default "CONFIG_SYS_IRAM_BASE + CONFIG_SYS_IRAM_SIZE"
+
+config SYS_S3C_NAND_HWECC
+	bool
+
+config S3C6410
+	bool
 
 config SYS_VENDOR
 	default "samsung"

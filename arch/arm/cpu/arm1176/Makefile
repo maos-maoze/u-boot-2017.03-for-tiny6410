@@ -12,3 +12,5 @@ obj- += dummy.o
 extra-y	= start.o
 
 obj-y += ../arm11/
+
+obj-$(if $(filter s3c6410,$(SOC)),y) += s3c6410/
